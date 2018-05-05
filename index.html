@@ -1,0 +1,92 @@
+<!doctype html>
+<title>Winery ecomm</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,intial-scale=1">
+<link rel="stylesheet" href="styles.css">
+
+<form method="POST" action="https://formspree.io/your@email.com">
+    <fieldset>
+        <legend>Personnal Information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name here" autofocus autocomplete="given-name">
+        
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Your phone # here" autocomplete="tel" pattern="[0-9]*">
+            
+            <label  for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Your email address here" autocomplete="email">
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday">
+
+    </fieldset>
+    <fieldset>
+        <legend>Wine Order</legend>
+        
+        <label for="champagene">Champagene</label>
+        <input type="number" min="0" max="100" id="champagene" name="champagene">
+        
+        <label for="merlot">Merlot</label>
+        <input type="number" min="0" max="100" id="merlot" name="merlot">
+       
+        <label for="regal">Regal</label>
+        <input type="number" min="0" max="100" id="regal" name="regal">
+    </fieldset>
+    <fieldset>
+        <legend>Shipping Information</legend>
+
+            <section class="wrap-section">
+                    <input type="radio" id="standard" name="shipping-type" value="standard">
+                    <label for="standard">Standard Shipping ($5)</label>
+            </section>
+            <section class="wrap-section">
+                    <input type="radio" id="expedite" name="shipping-type" value="expedite">
+                    <label for="expedite">Expedite Shipping ($21)</label>
+            </section>
+           
+            
+          
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" placeholder="Enter your street address" autocomplete="street-address">
+        
+            <label for="streetNumber">Street #</label>
+            <input type="number" pattern="[0-9]*" id="streetNumber" name="streetNumber" placeholder="Enter your street number">
+
+            <label for="city">City</label>
+            <input type="text"  id="city" name="city" required placeholder="Your city here">
+
+            <lable for="country">Country</lable><!--add multiple attribute to select tag if you want to select multiple item-->
+            <select id="country" name="country">
+                <optgroup label="Europe">
+                        <option value="uk">United Kingdom</option>
+                        <option value="ir" selected>Ireland</option>
+                        <option value="es">Spain</option>
+                        <option value="fr">France</option>
+                </optgroup>
+                <optgroup label="North America">
+                        <option value="us">USA</option>
+                        <option value="ca">Canada</option>
+                </optgroup>
+           </select>
+
+            <label for="time">Pickup time</label>
+            <input type="time"  id="time" name="time">
+            
+            <section class="wrap-section">
+                    <input type="checkbox" id="gift" name="gift" value="gift">
+                    <label>Gift wrap ?</label>
+            </section>
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments"></textarea>
+            
+
+            
+
+    </fieldset>    
+
+    <input type="submit" value="Order">
+    
+    
+
+</form>
+
